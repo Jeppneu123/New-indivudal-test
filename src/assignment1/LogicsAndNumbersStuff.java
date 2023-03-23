@@ -33,6 +33,7 @@ public class LogicsAndNumbersStuff {
         } else {
             return true;
         }
+
     }
 
     /**
@@ -50,6 +51,7 @@ public class LogicsAndNumbersStuff {
             sum += numbers[i];
         }
         return sum;
+
     }
 
     /**
@@ -67,6 +69,7 @@ public class LogicsAndNumbersStuff {
         }
 
         return sum / i;
+
     }
 
 
@@ -100,5 +103,6 @@ public class LogicsAndNumbersStuff {
         }
         return maxFreq;
     }
+
 
 }

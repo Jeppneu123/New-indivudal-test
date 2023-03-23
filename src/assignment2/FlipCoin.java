@@ -14,4 +14,5 @@ public class FlipCoin {
         Random random = new Random();
         return random.nextInt(2);
     }
+
 }
