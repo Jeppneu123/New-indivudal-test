@@ -12,7 +12,7 @@ public class Team {
      */
     public void addTeamMember(TeamMember m) {
         //TODO Delete line below, and implement this method
-        throw new UnsupportedOperationException();
+        members.add(m);
     }
     
     // Nothing to do here!
@@ -32,7 +32,13 @@ public class Team {
      */
     public boolean removeTeamMember(TeamMember m){
         //TODO Delete line below, and implement this method
-        throw new UnsupportedOperationException();
+        members.remove(m);
+
+        if (members.remove(m)){
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /**

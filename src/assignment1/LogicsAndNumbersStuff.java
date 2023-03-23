@@ -9,10 +9,10 @@ public class LogicsAndNumbersStuff {
      * @param c The last number
      * @return The difference of a and b, multiplied by c.
      */
-    public int diffMultipliedByC(int a, int b, int c)
+    public static int diffMultipliedByC(int a, int b, int c)
     {
         //TODO Delete line below, and implement this method
-        throw new UnsupportedOperationException();
+        return (a-b) * c;
     }
 
     /**
@@ -21,10 +21,18 @@ public class LogicsAndNumbersStuff {
      * @param vacation True if you are on vacation, false if you are not.
      * @return True if you can stay in bed given the parameters.
      */
-    public boolean canYouStayInBed(boolean weekday, boolean vacation)
+    public static boolean canYouStayInBed(boolean weekday, boolean vacation)
     {
         //TODO Delete line below, and implement this method
-        throw new UnsupportedOperationException();
+        if ((weekday && vacation) == true){
+            return false;
+        } else if (weekday == true) {
+            return false;
+        } else if (vacation == true){
+            return false;
+        } else {
+            return true;
+        }
     }
 
     /**
@@ -32,10 +40,16 @@ public class LogicsAndNumbersStuff {
      * @param numbers The array containing all the numbers to calculate the sum of.
      * @return The sum of all integers in the numbers array.
      */
-    public int sumOfNumbers(int[] numbers)
+    public static int sumOfNumbers(int[] numbers)
     {
         //TODO Delete line below, and implement this method
-        throw new UnsupportedOperationException();
+
+        int sum = 0;
+        for (int i = 0; i < numbers.length ; i++) {
+
+            sum += numbers[i];
+        }
+        return sum;
     }
 
     /**
@@ -43,11 +57,18 @@ public class LogicsAndNumbersStuff {
      * @param numbers The array containing all the numbers to calculate the average of.
      * @return The average of all the integers in the numbers array.
      */
-    public double averageOfNumber(int[] numbers)
-    {
+    public static double averageOfNumber(int[] numbers) {
         //TODO Delete line below, and implement this method
-        throw new UnsupportedOperationException();
+        int sum = 0;
+        int i;
+        for (i = 0; i < numbers.length; i++) {
+
+            sum += numbers[i];
+        }
+
+        return sum / i;
     }
+
 
     /**
      * Finds the number in the array that occurs the most times.
@@ -57,10 +78,27 @@ public class LogicsAndNumbersStuff {
      * @param numbers The array of numbers.
      * @return The number that occurs most often in the array.
      */
-    public int numberWithMostOccurrences(int[] numbers)
+    public static int numberWithMostOccurrences(int[] numbers)
     {
         //TODO Delete line below, and implement this method
-        throw new UnsupportedOperationException();
+        int n = numbers.length;
+        int max_count = 0;
+        int maxFreq = 0;
+
+        for (int i = 0; i < n; i++) {
+            int count = 0;
+            for (int j = 0; j < n; j++) {
+                if (numbers[i] == numbers[j]){
+                    count++;
+                }
+                if (count > max_count){
+                    max_count = count;
+                    maxFreq = numbers[i];
+                }
+            }
+
+        }
+        return maxFreq;
     }
 
 }

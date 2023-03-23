@@ -3,26 +3,33 @@ package assignment1;
 public class StringHandler {
 
     /**
-     * 
+     *
      * @param str
      * @return a string where all characters 'c' is replaced by the character 's'
      * Case insensitive.
      */
-    public String stringManipulation(String str) {
+    public static String stringManipulation(String str)
+    {
         //TODO Delete line below, and implement this method
-        throw new UnsupportedOperationException();
-    }
+            return str.replaceAll("(?i)c","s");
+        }
 
-    /**
-     * 
-     * @param str
-     * @return the length of str
-     * If the input str is null or "" you must return 0
-     * 
-     */
+
+        /**
+         *
+         * @param str
+         * @return the length of str
+         * If the input str is null or "" you must return 0
+         *
+         */
+
     public int stringLength(String str) {
         //TODO Delete line below, and implement this method
-        throw new UnsupportedOperationException();
+        if (str == "" || str == null){
+            return 0;
+        } else {
+            return str.length();
+        }
     }
 
     /**
@@ -31,9 +38,14 @@ public class StringHandler {
      * @return the cumulative length of all strings in arr
      * e.g. if arr is ["hi","hello","hej"] the method should return 10
      */
-    public int stringArrayLength(String[] arr) {
-        //TODO Delete line below, and implement this method
-        throw new UnsupportedOperationException();
+
+    public static int stringArrayLength(String[] arr) {
+
+        int counter = 0;
+        for (int i = 0; i < arr.length; i++) {
+            counter += arr[i].length();
+        }
+        return counter;
     }
 
     /**
@@ -42,9 +54,11 @@ public class StringHandler {
      * @return reverse the characters in the String str
      * e.g. "Hello" -> "olleH"
      */
-    public String stringReverse(String str) {
-        //TODO Delete line below, and implement this method
-        throw new UnsupportedOperationException();
+
+    public static String stringReverse(String str) {
+        StringBuilder argumentStringBuilder = new StringBuilder(str);
+        argumentStringBuilder.reverse();
+        return argumentStringBuilder.toString();
     }
 
     /**
@@ -55,6 +69,7 @@ public class StringHandler {
      * The method should not be case sensitive.
      * e.g. parameters: "Change comes through passion", 'g' should return 2
      */
+
     public int charCount(String str, char c) {
         //TODO Delete line below, and implement this method
         throw new UnsupportedOperationException();
@@ -72,6 +87,6 @@ public class StringHandler {
         //TODO Delete line below, and implement this method
         throw new UnsupportedOperationException();
     }
-
-
 }
+
+
